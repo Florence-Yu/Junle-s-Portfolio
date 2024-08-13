@@ -1,0 +1,515 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+:root{
+    --background: rgb(0, 0, 0);
+    --second-background: rgb(21,21,21);
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--background);
+}
+
+ul{
+    display:flex;
+    align-items: center;
+    gap: 3em;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 2em 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+nav ul a{
+    color: rgb(255, 255, 255);
+    opacity: 0.7;
+    transition: 0.2s ease-in-out;
+}
+nav ul a:hover{
+    opacity: 1;
+}
+.logo{
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    opacity: 0.8;
+    transition: 0.2s ease-in-out;
+}
+.logo:hover{
+    opacity: 1;
+}
+.btn{
+    padding: 0.5em 1em;
+    color: rgb(255, 255, 255);
+    font-family: 500;
+    letter-spacing: 1px;
+    border-radius: 0.5em;
+    font-size: 1.1em;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.btn:hover{
+    background-color: white;
+    color: var(--background);
+}
+
+section{
+    min-height: 100vh;
+    padding: 5% 15%;
+}
+#HOME{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    color: white;
+}
+#HOME img{
+    width: 18vw;
+    border-radius: 50%;
+    margin-top: 3em;
+    width: 300px;
+    height: 300px;
+}
+.info-box{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5em;
+    max-width: 600px;
+    color: rgb(255, 255, 255);
+}
+
+.info-box h1{
+    font-size: 3em;
+    font-weight: 500;
+    color: antiquewhite;
+}
+
+.info-box h3{
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.info-box p{
+    opacity: 0.7;
+    padding-top: 4%;
+}
+
+.btn-box{
+    display: flex;
+    gap: 1em;
+}
+
+.btn-box .btn:nth-of-type(2){
+    background-color: white;
+    color: var(--background);
+}
+
+.btn-box .btn:nth-of-type(2):hover{
+    background-color: var(--background);
+    color: white;
+}
+
+::-webkit-scrollbar{
+    width: 20px;
+    background-color: var(--background);
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(103, 103, 103));
+}
+
+
+#ABOUT{
+    background-color: var(--second-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+    color: white;
+}
+
+.about-box{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 2em;
+}
+
+.about-box h1{
+    font-size: 2.5em;
+}
+
+.about-box p{
+    color: white;
+    opacity: 0.8;
+    line-height: 1.6;
+    font-size: 1.2em;
+}
+
+.skills{
+    display: flex;
+    text-align: left;
+    gap: 10em;
+}
+
+.skills ul{
+    font-size: 0.9em;
+    font-weight: 500;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);    
+    color: white;
+    opacity: 0.8;
+    gap: 3em;
+    column-gap: 10em;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills ul li span{
+    display: flex;
+    align-items: center;
+    row-gap: 0.5em;
+    font-size: 1.2em;
+    transition: 0.3s ease-in-out;
+}
+
+.skills ul li:hover{
+    transform: translateX(10px);
+}
+
+.skills ul li i{
+    font-size: 1.2em;
+}
+
+.about-box h2{
+    font-size: 2.5em;
+}
+
+#WORK{
+    background-color: var(--background);
+}
+
+#WORK h1{
+    font-size: 2.5em;
+}
+
+.heater{
+    text-align: center;
+    font-size: 5em;
+    margin: 0.5em 0;
+}
+
+.WORK-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    gap: 2em;
+}
+
+.box{
+    border: 3px solid white;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    object-fit: cover;
+    padding: 3em;
+    gap: 2em;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.box:hover{
+    border: 3px solid rgb(71, 71, 71);
+}
+
+.box p{
+    opacity: 0.8;
+}
+
+.box h1{
+    font-size: 2em;
+}
+
+.box img{
+    min-width: 25px;
+    border-radius: 0.5em;
+}
+
+
+
+#CONTACT{
+    background-color: var(--second-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+    color: white;
+    padding: 5em; 
+    margin: 0 auto; 
+    min-height: 70vh; 
+    max-height: 90vh;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+form .input-box{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 1em;
+}
+.input-box span{
+    font-size: 1.5em;
+}
+form input{
+    font-size: 1.2em;
+    padding: 1em 4em;
+    border-radius: 0.5em;
+    border: none;
+    outline: none;
+}
+form input:focus{
+    background: rgb(229, 229, 229);
+}
+
+#RESUME{
+    background-color: var(--second-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+    color: white;
+    padding: 1em; 
+    margin: 0 auto; 
+    min-height: 20vh; 
+    max-height: 40vh;
+}
+#RESUME a{
+    color: white;
+}
+
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10em;
+    bottom: 0;
+    background-color: var(--background);
+    width: 100%;
+    padding: 5em 10%;
+    color: white;
+}
+
+.col-left{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.col-box i{
+    font-size: 1em;
+}
+
+.col-box span{
+    font-size: 1em;
+}
+
+.col-right{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    color: white;
+    max-width: 500px;
+}
+
+.col-right span{
+    font-size: 1.3em;
+}
+
+.col-right .social-icons{
+    display: flex;
+    align-items: baseline;
+    justify-content: left;
+    gap: 1em;
+}
+
+.col-right .social-icons i{
+    font-size: 1.3em;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.social-icons i:hover{
+    color: white;
+}
+
+.btn {
+    background-color: #f0f0f0;
+    color: #333;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Default dark mode (black background) */
+body {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Light mode (white background) */
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Styling for the navigation in light mode */
+nav {
+    background-color: #222222;
+}
+
+body.light-mode nav {
+    background-color: #f8f8f8;
+}
+
+.btn {
+    background-color: #444444;
+    color: #ffffff;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode .btn {
+    background-color: #dddddd;
+    color: #333333;
+}
+
+
+
+
+@media(max-width:968px){
+    section{
+        padding: 8em 15%;
+    }
+    nav .btn{
+        display: none;
+    }
+    #menu{
+        display: block;
+    }
+    .links{
+        position: absolute;
+        top: 100%;
+        right:0;
+        width: 100%;
+        padding: 1em 3em;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: rgba(0,0,0,0.9);
+        display: none;
+    }
+    .link a{
+        margin: 2em 0;
+        display: block;
+        font-size: 1.5em;
+        color: white;
+    }
+    .links.active{
+        display: block;
+    }
+    #HOME h1{
+        font-size: 3em;
+    }
+    #HOME h3{
+        font-size: 2em;
+    }
+    #HOME img{
+        width: 14vw;
+        border-radius: 50%;
+        margin-top: 3em;
+        width: 200px;
+        height: 200px;
+    }
+    #ABOUT{
+        flex-direction: column;
+    }
+    #ABOUT h1{
+        font-size: 2.5em;
+    }
+    #ABOUT ul{
+        font-size: 1em;
+    }
+   
+   
+}
+@media(max-width:768px){
+    #HOME h1{
+        font-size: 2.5em;
+    }
+    #HOME h3{
+        font-size: 1.5em;
+    }
+    #HOME img{
+        width: 22vw;
+        border-radius: 50%;
+        margin-top: 3em;
+        width: 400px;
+        height: 400px;
+    }
+    #ABOUT .skills{
+        gap:3em;
+    }
+
+    #WORK .header{
+        font-size: 3em;
+    }
+    #CONTACT .header{
+        font-size: 3em;
+    }
+    #CONTACT .input-box span{
+        font-size: 1.2em;
+    }
+    .input-box input{
+        padding: 0.5em 1em;
+    }
+    footer{
+        flex-direction: column;
+        gap: 5em;
+        align-items: baseline;
+    }
+}
