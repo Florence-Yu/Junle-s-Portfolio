@@ -1,6 +1,8 @@
 My Portfolio Website
 Overview
-This project is a personal portfolio website showcasing my skills, projects, and contact information. The website is designed to be responsive and user-friendly, featuring a sleek dark theme with an optional light mode for better readability. It includes sections for an introduction, about me, my work, and contact information.
+This project is a personal portfolio website showcasing my skills, projects, and contact information.
+The website is designed to be responsive and user-friendly, featuring a sleek dark theme with an optional
+light mode for better readability. It includes sections for an introduction, about me, my work, and contact information.
 
 Features
 Responsive Design: The website is fully responsive and looks great on all devices, including desktops, tablets, and mobile phones.
